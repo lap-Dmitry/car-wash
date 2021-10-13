@@ -6,6 +6,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
     target: 'web',
     entry: './src/index.js',
+    performance: {
+        maxEntrypointSize: 2024000,
+        maxAssetSize: 2024000
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'app.bundle.js',
